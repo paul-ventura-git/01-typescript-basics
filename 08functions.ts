@@ -21,6 +21,23 @@ function add(a: number, b: number, c?: number) {
 }
 
 // 05. Default parameters
+// TypeScript can also infer the type from the default value.
 function pow(value: number, exponent: number = 10) {
   return value ** exponent;
 }
+
+// 06. Named parameters
+function divide({ dividend, divisor }: { dividend: number, divisor: number }) {
+  return dividend / divisor;
+}
+
+// 07. Rest parameters
+function add_2(a: number, b: number, ...rest: number[]) {
+  return a + b + rest.reduce((p, c) => p + c, 0);
+}
+
+// 08. Type aliases
+type Negate = (value: number) => number;
+
+// in this function, the parameter `value` automatically gets assigned the type `number` from the type `Negate`
+const negateFunction: Negate = (value) => value * -1;
