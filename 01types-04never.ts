@@ -46,3 +46,7 @@ function getArea(shape: Shape): number {
 }
 
 //let x: never = true; // Error: Type 'boolean' is not assignable to type 'never'.
+
+// Advanced use case:
+// Example of extracting argument types using conditional types and never
+type ExtractArgument<T> = T extends (...args: infer CapturedTypes) => any ? CapturedTypes : never;
