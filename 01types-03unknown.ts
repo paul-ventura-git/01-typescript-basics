@@ -2,11 +2,11 @@
 let w: unknown = 1;
 console.log(w);
 console.log(typeof w);
-console.log("***************************************************************");
+console.log("***************************************************************01");
 w = "Esto es una cadena"; // no error
 console.log(w);
 console.log(typeof w);
-console.log("***************************************************************");
+console.log("***************************************************************02");
 
 w = {
   runANonExistentMethod: () => {
@@ -15,10 +15,13 @@ w = {
 } as { runANonExistentMethod: () => void}
 console.log(w);
 console.log(typeof w);
-console.log("***************************************************************");
+
 // How can we avoid the error for the code commented out below when we don't know the type?
 // w.runANonExistentMethod(); // Error: Object is of type 'unknown'.
 if(typeof w === 'object' && w !== null) {
   (w as { runANonExistentMethod: Function }).runANonExistentMethod();
 }
+console.log("***************************************************************03");
+console.log(w as { runANonExistentMethod: Function })
+console.log(typeof (w as { runANonExistentMethod: Function }))
 // Although we have to cast multiple times we can do a check in the "if" to secure our type and have a safer casting
