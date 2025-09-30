@@ -38,6 +38,15 @@ console.log(typeof coloredRectangle)
 // 04. Interfaces para funciones
 interface MyFunction {
   (a: number, b: number): number
-} // Define la forma de una función que recibe dos números y retorna un número
+}
+// Define la forma de una función que recibe dos números y retorna un número
 const add_5: MyFunction = (x, y) => x + y;
 console.log(add(2, 3));
+
+// 05. Interfaces para arrays
+interface StringArray {
+  [index: number]: string
+} // Define la forma de un array de strings
+const myArray: StringArray = ["Hello", "World"];
+console.log(myArray[0]);
+
