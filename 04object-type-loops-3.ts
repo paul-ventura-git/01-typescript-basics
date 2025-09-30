@@ -13,3 +13,5 @@ console.log(result)
 console.log(result.length)
 //console.log(userslist)
 //console.log(userslist.length)
+
+// Ver solución con callbacks
