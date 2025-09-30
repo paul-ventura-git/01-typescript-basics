@@ -3,10 +3,15 @@ let w: unknown = 1;
 console.log(w);
 console.log(typeof w);
 console.log("***************************************************************01");
+//const m: number = w; // Error: Type 'unknown' is not assignable to type 'number'.
+const m: number = w as number; // Type assertion (casting)
+
 w = "Esto es una cadena"; // no error
 console.log(w);
 console.log(typeof w);
 console.log("***************************************************************02");
+
+// const n: number = w; // Error: Type 'string' is not assignable to type 'number'.
 
 w = {
   runANonExistentMethod: () => {
