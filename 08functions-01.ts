@@ -11,7 +11,7 @@ function printHello(): void {
   console.log('Hello!');
 }
 
-console.log(printHello());
+console.log(printHello()); // prints "Hello!" and then "undefined"
 
 console.log("03. Parameters");
 function multiply(a: number, b: number) {
@@ -26,7 +26,7 @@ function add(a: number, b: number, c?: number) {
   return a + b + (c || 0);
 }
 
-console.log(add(528, 788));
+console.log(add(8000, 8000));
 
 console.log("05. Default parameters")
 // TypeScript can also infer the type from the default value.
@@ -43,9 +43,9 @@ function divide({ dividend, divisor }: { dividend: number, divisor: number }) {
 
 console.log(divide({ dividend: 10, divisor: 2 }));
 
-console.log("07. Rest parameters")
+console.log("07. ...Rest parameters")
 function add_2(a: number, b: number, ...rest: number[]) {
-  return a + b + rest.reduce((p, c) => p + c, 0);
+  return a + b + rest.reduce((p, c) => p + c, 0); //
 }
 
 console.log(add_2(1, 2, 3, 4, 5));
