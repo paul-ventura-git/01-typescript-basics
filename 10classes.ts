@@ -1,3 +1,8 @@
+/**
+ * 10. Classes
+ * Classes are a template for creating objects. They encapsulate data with code to work on that data.
+ * In TypeScript, you can define properties and methods within a class, and you can also use access modifiers to control the visibility of these members.
+ */
 class Person {
   private readonly name: string;
 

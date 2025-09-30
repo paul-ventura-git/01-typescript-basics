@@ -1,8 +1,0 @@
-// La función recibe un callback que define la operación
-function calcular(a: number, b: number, callback: (x: number, y: number) => number): number {
-  return callback(a, b);
-}
-
-// Diferentes usos
-console.log(calcular(5, 3, (x, y) => x + y)); // 8
-console.log(calcular(5, 3, (x, y) => x * y)); // 15
