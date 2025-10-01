@@ -54,7 +54,7 @@ console.log(identidad<number[]>([1, 2, 3])); // [1, 2, 3]
 console.log(identidad<Animal>(new Perro2())); // Perro2 {}
 
 // 04. Polimorfismo con union types
-function mostrar(valor: string | number): void {
+function mostrar1(valor: string | number): void {
   if (typeof valor === "string") {
     console.log("Texto:", valor.toUpperCase());
   } else {
@@ -62,8 +62,8 @@ function mostrar(valor: string | number): void {
   }
 }
 
-mostrar("hola");
-mostrar(3.1416);
+mostrar1("hola");
+mostrar1(3.1416);
 
 // 05. Polimorfismo con sobrecarga de métodos
 class Logger {
