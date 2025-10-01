@@ -38,11 +38,11 @@ v.encender();
 v.abrirMaletera();
 
 // 04. Herencia con super()
-class Figura {
+class FiguraClass {
   constructor(public color: string) {}
 }
 
-class Circulo1 extends Figura {
+class Circulo1 extends FiguraClass {
   constructor(color: string, public radio: number) {
     super(color);
   }
