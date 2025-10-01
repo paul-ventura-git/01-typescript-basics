@@ -74,6 +74,10 @@ let calculadora: { sumar: (a: number, b: number) => number } = {
 console.log(calculadora.sumar(5, 10));
 
 // 10. object vs. {} vs. Record<string, any>
+// object → más semántico que {}, pero no detalla estructura.
+// {} → acepta casi cualquier cosa, incluso primitivos → menos estricto (null, undefined).
+// Record<string, any> → ideal para diccionarios dinámicos con claves string y valores sin restricciones.
+
 let a1: object = { x: 1 }; 
 a1 = [1,2]; 
 a1 = () => {};
