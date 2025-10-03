@@ -8,9 +8,9 @@ class Box {
   }
 }
 
-const box1 = new Caja("Texto");
-const box2 = new Caja(123);
-const box3 = new Caja({ clave: "valor" });
+const box1 = new Box("Texto");
+const box2 = new Box(123);
+const box3 = new Box({ clave: "valor" });
 
 // 02. Constructor con unknown
 // Con unknown, el compilador exige comprobaciones antes de usar el valor.
@@ -34,7 +34,7 @@ c1.mostrarSiEsString(); // Cadena: HOLA
 // 03. Constructor con union types
 // Permite múltiples tipos, pero con restricciones de uso según el tipo actual.
 class Resultado {
-  data: string | number;
+  private data: string | number;
 
   constructor(data: string | number) {
     this.data = data;

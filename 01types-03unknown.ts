@@ -4,7 +4,7 @@ console.log(w);
 console.log(typeof w);
 console.log("***************************************************************01");
 //const m: number = w; // Error: Type 'unknown' is not assignable to type 'number'.
-const m: number = w as number; // Type assertion (casting)
+const m: number = w as number; // Type assertion (type casting, "conversión de tipos")
 
 w = "Esto es una cadena"; // no error
 console.log(w);

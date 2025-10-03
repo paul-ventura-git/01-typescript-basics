@@ -83,8 +83,23 @@ interface RepositorioConID<T> extends Repositorio<T> {
 }
 
 class UserRepo implements RepositorioConID<string> {
-  obtener() { return "Usuario"; }
-  obtenerPorId(id: number) { return `Usuario ${id}`; }
+  private usuarios: string[] = [];
+
+  agregar(item: string): void {
+    this.usuarios.push(item);
+  }
+
+  listar(): string[] {
+    return [...this.usuarios];
+  }
+
+  obtener(): string {
+    return this.usuarios.length > 0 ? this.usuarios[0] : "Sin usuarios";
+  }
+
+  obtenerPorId(id: number): string {
+    return this.usuarios[id] ?? `Usuario ${id} no encontrado`;
+  }
 }
 
 // 09. Herencia múltiple con mixins
